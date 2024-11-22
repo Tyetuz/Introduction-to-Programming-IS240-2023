@@ -1,0 +1,23 @@
+print("Python")
+print("Python"[1], "Python"[5], "Python"[2:4])
+str1 = "Hello World!"
+print(str1.find('W'))
+print(str1.find('x'))
+print(str1.rfind('l'))
+
+print("Python")
+print("Python"[-1], "Python"[-4], "Python"[-5:-2])
+str1 = "spam & eggs"
+print(str1[-2])
+print(str1[-8:-3])
+print(str1[0:-1])
+
+print("Python"[2:], "Python"[:4], "Python"[:]) #Moves from left to right
+print("Python"[-3:], "Python"[:-3]) #Moves from (-1 to -3) moves from (-6 to -3)
+
+#"ha" * 4
+#"mur" *2
+#"x" * 10
+#("cha-"*2) + "cha"    #Run all of these in a python shell
+
+

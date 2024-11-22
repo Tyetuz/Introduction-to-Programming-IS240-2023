@@ -1,0 +1,21 @@
+#Classes and Objects Chapter 7.1-7.2
+
+def main():
+    song1 = Music("Beethoven", "Symphony No. 5", 1808, "Classical")
+    song2 = Music("Bach", "Brandenburg Concerto No. 3", 1721, "Baroque")
+    print(song1)
+    print(song2)
+
+
+class Music:
+    def __init__(self, composer, title, year, genre):
+        self._composer = composer
+        self._title = title
+        self._year = year
+        self._genre = genre
+
+    def __str__(self):
+        return (self._composer + " composed " + self._title + ", classified as " + self._genre + " in the year " + str(self._year))
+    
+       
+main()

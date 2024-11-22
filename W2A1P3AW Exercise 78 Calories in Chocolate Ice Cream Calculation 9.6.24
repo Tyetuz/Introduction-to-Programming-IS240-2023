@@ -1,0 +1,13 @@
+#Exercise 78: Calories in Chocolate Ice Cream Calculation
+
+#Given dimensions and caloric density
+lengthOfaMile = 5280 #Length in feet
+volumeInCubicFeet = lengthOfaMile ** 3 #Volume in cubic feet
+caloriesPerCubicFoot = 48600 #Calories per cubic foot
+
+#Calculations of total calories in one cubic mile of ice cream
+totalCalories = volumeInCubicFeet * caloriesPerCubicFoot
+
+#Print statement for calories in one cubic mile of chocolate ice cream
+print("Calories in one cubic mile of chocolate ice cream:", totalCalories)
+

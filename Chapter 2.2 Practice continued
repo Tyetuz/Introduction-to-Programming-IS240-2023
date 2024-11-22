@@ -1,0 +1,34 @@
+#Chapter 2.2 Practice continued
+
+str1 = "Python"
+
+#len(str1)
+#str1.upper()
+#str1.lower()
+#str1.count("th")
+#"coDE".capitalize()
+#"beN hur".title()
+#"ab ".rstrip()        #Run in a python shell
+
+#praise = "Good Doggie".upper()
+#numberOfGees = praise.count('G')
+
+numberOfGees = "Good Doggie".upper().count('G') #Chained Methods 
+#Chained methods are executed from left to right. Chaining often produces clearer code 
+#since it eliminates temporary variables, such as the variable praise above.
+
+#Enter a full name and this program with divide the first and last names
+fullName = input("Enter a full name: ")
+n = fullName.rfind(" ")
+print("Last name:", fullName[n+1:])
+print("First name(s):", fullName[:n])
+
+print(int("23"))
+print(float("23"))
+print(eval("23"))
+print(eval("23.7"))
+
+x = 5
+print(eval("23 + (2 * x)"))
+
+

@@ -1,0 +1,45 @@
+import sqlite3
+
+# Correct the database file name to be a string
+connection = sqlite3.connect('GrandTheftAuto.db')
+cursor = connection.cursor()
+
+# Create the table if it does not already exist
+cursor.execute("CREATE TABLE IF NOT EXISTS gta (release_year INT, release_name TEXT, city TEXT)")
+
+release_list = [
+    (1997, "Grand Theft Auto", "State of New Guernsey"),
+    (1999, "Grand Theft Auto 2", "Anywhere, USA"),
+    (2001, "Grand Theft Auto III", "Liberty City"),
+    (2002, "Grand Theft Auto: Vice City", "Vice City"),
+    (2004, "Grand Theft Auto: San Andreas", "State of San Andreas"),
+    (2008, "Grand Theft Auto IV", "Liberty City"),
+    (2013, "Grand Theft Auto V", "Los Santos")
+]
+
+# Insert the data into the table
+cursor.executemany("INSERT INTO gta (release_year, release_name, city) VALUES (?, ?, ?)", release_list)
+
+# Print database rows
+print("******************************************************")
+cursor.execute("SELECT * FROM gta WHERE city=:C", {"C": "Liberty City"})
+gta_search = cursor.fetchall()
+print(gta_search)
+
+# Create the cities table if it does not already exist
+cursor.execute("CREATE TABLE IF NOT EXISTS cities (gta_city TEXT, real_city TEXT)")
+
+# Insert data into the cities table
+cursor.execute("INSERT INTO cities (gta_city, real_city) VALUES (?, ?)", ("Liberty City", "New York City"))
+cursor.execute("select * from cities where gta_city=:C", {"C": "Liberty City"})
+cities_search = cursor.fetchall()
+print(cities_search)
+
+#manipulate database data
+print("******************************************************")
+for i in gta_search:
+    adjusted = [cities_search[0][1] if value==cities_search[0][0] else value for value in i]
+    print(adjusted)
+# Commit the changes and close the connection
+#connection.commit()
+connection.close()

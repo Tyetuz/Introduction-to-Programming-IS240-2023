@@ -1,0 +1,13 @@
+#Exercise 70: Projectile Motion Calculation
+
+#Provided initial velocity and height
+v0 = 50 #Initial velocity in feet per second
+h0 = 5 #Initial height in feet
+t = 3 #time in seconds
+
+#Calculating height after time seconds using the formula.
+#h(t) = -16t^2 = v0*t + h0
+height = -16 * (t **2) + v0 * t + h0
+
+#Print statement with calculations
+print("Height in feet after 3 seconds:", height)

@@ -1,0 +1,18 @@
+#Exercise 64: Break-even point calculation
+
+#Fixed costs
+fixedCosts = 5000
+
+#Price per unit
+pricePerUnit = 8
+
+#Cost per unit
+costPerUnit = 6
+
+#Calculation of break-even point
+breakEvenPoint = fixedCosts / (pricePerUnit - costPerUnit)
+
+#Print statement for break-even point
+print("Break-even point:", breakEvenPoint)
+
+

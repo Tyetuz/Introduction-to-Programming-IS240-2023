@@ -1,0 +1,42 @@
+print("Hello", "World!", sep="**")
+print("Hello", "World!", sep="")
+print("Hello", "World!", sep="    ")
+
+print("Hello", end="  ")
+print("World!")
+
+print("Hello", end="")
+print("World!")
+
+print("a\tb\tc")
+print("a\tb\tc".expandtabs(5))
+print("Nudge, \tnudge, \nwink, \twink.".expandtabs(15))
+
+print("0123456789101112131415161718192021222324252627282930")
+print("Rank".ljust(5), "Player".ljust(20), "HR".rjust(3), sep="")
+print("1".center(5), "Barry Bonds".ljust(20), "762".rjust(3), sep="")
+print("2".center(5), "Hank Aaron".ljust(20), "755".rjust(3), sep="")
+print("3".center(5), "Babe Ruth".ljust(20), "714".rjust(3), sep="")
+
+#print(str1.ljust(w))
+#print(str1.center(w))
+#print(str1.rjust(w))
+
+print("01234567891011121314151617181920")
+print("{0:^5s}{1:<20s}{2:>3s}".format("Rank", "Player", "HR"))
+print("{0:^5n}{1:<20s}{2:>3n}".format(1, "Barry Bonds", 762))
+print("{0:^5n}{1:<20s}{2:>3n}".format(2, "Hank Aaron", 755))
+print("{0:^5n}{1:<20s}{2:>3n}".format(3, "Babe Ruth", 714))
+
+print("{0:10d}".format(123456789))
+print("{0:10,d}".format(987654321))
+print("{0:10.2f}".format(12345.6789))
+print("{0:10,.2f}".format(98765.4321))
+print("{0:10,.3f}".format(12345.6789))
+print("{0:10.2%}".format(98.7654321))
+print("{0:10,.3%}".format(123.456789))
+
+print("The area of {0:s} is {1:,d} square miles.".format("Texas", 268820))
+str1 = "The population of {0:s} is {1:.2%} of the U.S. populatioin."
+print(str1.format("Texas", 26448000/309000000))
+
